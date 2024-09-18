@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Car Image -->
+        <ImageView
+            android:id="@+id/car_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car_image_placeholder" />
+
+        <!-- Car Details -->
+        <TextView
+            android:id="@+id/car_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toyota Axios"
+            android:textSize="24sp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center" />
+
+        <RatingBar
+            android:id="@+id/car_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="4.9"
+            android:stepSize="0.1"
+            android:numStars="5"
+            android:isIndicator="true"
+            android:layout_gravity="center" />
+
+        <!-- Pickup Date and Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pickup Date and Time"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/pickup_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Date"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/pickup_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Time"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <!-- Return Date and Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Return Date and Time"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/return_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Date"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/return_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Time"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <!-- Additional Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Additional"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/additional_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="A/C"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <!-- Owner and Renter Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <!-- Owner Details -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/owner_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/owner_placeholder"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/owner_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Karim Hossain"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/owner_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="karim@gmail.com"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Renter Details -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/renter_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/renter_placeholder"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/renter_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Karim Hossain"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/renter_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="karim@gmail.com"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Availability Calendar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Availability Calendar"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <CalendarView
+            android:id="@+id/availability_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginTop="8dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/advance_payment_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Advance Payment"
+                android:background="@color/green" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:background="@color/red" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
